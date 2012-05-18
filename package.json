@@ -3,7 +3,9 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "express": "2.5.8"
+      "express": ">= 2.5.9"
     , "ejs": ">= 0.0.1"
+    , "dustjs-linkedin": ">= 0.4.0" 
+    , "watch-tree": ">= 0.1.1"
   }
 }

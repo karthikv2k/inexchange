@@ -3,8 +3,12 @@
  * Module dependencies.
  */
 
+dust = require('dustjs-linkedin');
 var express = require('express')
   , routes = require('./routes');
+  
+require('./dustc');  
+require('./public/javascripts/dusts');  
 
 var app = module.exports = express.createServer();
 
@@ -13,6 +17,7 @@ var app = module.exports = express.createServer();
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
+  app.use(express.logger({ format: ':method :url' }));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
@@ -28,6 +33,9 @@ app.configure('development', function(){
 app.configure('production', function(){
   app.use(express.errorHandler());
 });
+
+// assign the dust engine to .dust files
+//app.engine('dust', cons.dust);
 
 // Routes
 
