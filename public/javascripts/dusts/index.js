@@ -1,1 +1,1 @@
-(function(){dust.register("index",body_0);function body_0(chk,ctx){return chk.write("iWelcome. ").reference(ctx.get("title"),ctx,"h");}return body_0;})();
+(function(){dust.register("index",body_0);function body_0(chk,ctx){return chk.write("Welcome ").reference(ctx.get("name"),ctx,"h");}return body_0;})();
