@@ -1,1 +1,1 @@
-(function(){dust.register("index",body_0);function body_0(chk,ctx){return chk.write("Welcome ").reference(ctx.get("name"),ctx,"h");}return body_0;})();
+(function(){dust.register("index",body_0);function body_0(chk,ctx){return chk.write("<a href=\"/li_auth\"><img src=\"/images/login_with_linkedin.png\" ></a>");}return body_0;})();

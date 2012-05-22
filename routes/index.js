@@ -1,8 +1,10 @@
-var dust = require('dustjs-linkedin');
-/*
- * GET home page.
- */
+/*var fs = require('fs');
 
-exports.index = function(req, res){
-  res.render("index.ejs");
-};
+module.exports = function(app){
+  fs.readdirSync(__dirname).forEach(function(file) {
+      if (file == "index.js") return;
+      var name = file.substr(0, file.indexOf('.'));
+      require('./' + name)(app);
+      });
+}
+*/

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-		<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script src="/javascripts/dust-full-0.4.0.js"></script> 
-		<script src="/javascripts/dusts/index.js"></script> 
-  </head>
-  <body>
-    <%- body %>
-		<div id=data></div>
-		<script>
-		$(document).ready(function(){
-  dust.render("index", {name: "Karthik"}, function(err, out) {
+<head>
+<title></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/javascripts/dust-full-0.4.0.js"></script> 
+<script src="/javascripts/dusts/<%= module %>.js"></script> 
+</head>
+<body>
+<%- body %>
+<div id=data></div>
+<script>
+data=JSON.parse('<%- JSON.stringify(data) %>');
+$(document).ready(function(){
+		dust.render("<%= module %>",data, function(err, out) {
 			$("#data").append(out);
-           });});
-		</script>
-  </body>
+			});});
+</script>
+</body>
 </html>

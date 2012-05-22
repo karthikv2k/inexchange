@@ -1,0 +1,1 @@
+(function(){dust.register("li_auth",body_0);function body_0(chk,ctx){return chk.write("Your LinkedIn access token is ").reference(ctx.get("token"),ctx,"h").write(".");}return body_0;})();

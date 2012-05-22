@@ -7,5 +7,9 @@
     , "ejs": ">= 0.0.1"
     , "dustjs-linkedin": ">= 0.4.0" 
     , "watch-tree": ">= 0.1.1"
+    , "mysql":">= 0.9.6"
+    , "debugger":">= 0.0.1"
+    , "linkedin-js":">= 0.1.4"
+    , "optimist":">= 0.3.4"
   }
 }
