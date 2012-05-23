@@ -1,1 +1,1 @@
-web: node lib/run.js --file ./app.js 
+web: node lib/run.js --file ../test/se_test 
