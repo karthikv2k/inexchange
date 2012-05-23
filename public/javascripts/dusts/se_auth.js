@@ -1,0 +1,1 @@
+(function(){dust.register("se_auth",body_0);function body_0(chk,ctx){return chk.write("Your recent Stack Overflow questions:").section(ctx.get("questions"),ctx,{"block":body_1},null);}function body_1(chk,ctx){return chk.write("<p>Title: ").reference(ctx.get("title"),ctx,"h").write("<br>View count: ").reference(ctx.get("view_count"),ctx,"h").write("</p>");}return body_0;})();

@@ -1,0 +1,8 @@
+Your recent Stack Overflow questions:
+{#questions}
+<p>
+Title: {title}<br>
+View count: {view_count}
+</p>
+{/questions}
+
