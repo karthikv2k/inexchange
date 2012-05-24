@@ -42,4 +42,14 @@ div.title{
 		height: 75px;
 		background-color: #3b5999;
 }
+p.timeline_title{
+	font-size:120%;
+color: #0077CC;
+			 text-shadow: 0 2px 0 white;
+margin: 0 0 .3em 0;
+				line-height: 1;
+}
+.timeline_title{
+	font-size:12;
+}
 

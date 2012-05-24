@@ -3,8 +3,18 @@ require('linkedin-js')
 (CONFIG.LI_API_KEY,CONFIG.LI_SECRET, 'http://localhost:5000/li_auth');
 var url=require('url');
 var https=require('../lib/https_client');
+var utils=require('../lib/utils');
 
 module.exports = function(app){
+
+  app.get('/li_share',function(req, res){
+      var params = req.query;
+      params.oauth_token_secret= req.session.token.oauth_token_secret;
+      params.oauth_token= req.session.token.oauth_token;
+      utils.li_share(params,function(data){
+        res.end(data);
+        });
+      });
 
   app.get('/li_auth',function(req, res){
       // the first time will redirect to linkedin

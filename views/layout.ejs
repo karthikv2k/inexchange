@@ -16,6 +16,19 @@
 <%- body %>
 <div class="container" id=data></div>
 <script>
+function share(url){
+	$.ajax({
+url:url,cache:false}
+).done(function(result) { 
+	var result=JSON.parse(result).share;
+	if(result=="true"){
+	alert("Shared successfully on LinkedIn.");
+	}else{
+	alert("Not able to share on LinkedIn.");
+}
+});
+}
+
 data=JSON.parse('<%- JSON.stringify(data) %>');
 $(document).ready(function(){
 		dust.render("<%= module %>",data, function(err, out) {
