@@ -1,8 +1,40 @@
-Your recent Stack Overflow questions:
-{#questions}
-<p>
-Title: {title}<br>
-View count: {view_count}
-</p>
-{/questions}
+{>p_title/}
+
+  <script>
+    $(function() {
+            $( "#tabs" ).tabs();
+              });
+  </script>
+<div id="tabs">
+
+  <ul>
+  <li><a href="#tabs-1">Auto share settings</a></li>
+  <li><a href="#tabs-2">Stack Exchange timeline</a></li>
+  </ul>
+  
+  <div id="tabs-1">
+  <table>
+  {#se_auto_share_options}
+  <tr><td>
+  {name}
+  </td><td>
+  <img class="middle" height="30" src="/images/{default_option}.png">
+  </td></tr>
+  {/se_auto_share_options}
+  </table>
+  </div>
+  
+  <div id="tabs-2">
+  <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+  {#timeline}
+  <div class="se_timeline_event">
+  <p>{title}</p>
+  <div class="se_timeline_date">{creation_date}</div>
+  <div class="se_timeline_type">{timeline_type}</div>
+  <script type="IN/Share" data-url="{link}"></script>
+  </div>
+  {/timeline}
+  </div>
+  
+</div>
 

@@ -12,9 +12,9 @@ module.exports = function(app){
           if(data!=null){
           var id = data['Stack Overflow']; 
           req.session.se_ids=data;
-          //db.se_update_user(req.session.li_mid,access_token,JSON.stringify(data));
-          se_client.get_questions(id,access_token,function(questions){
-                res.render('nothing.ejs',{module: "se_auth",data:{questions:questions.items}});
+          db.se_update_user(req.session.li_mid,access_token,JSON.stringify(data));
+          se_client.get_timeline(id,access_token,function(timeline){
+                res.render('nothing.ejs',{module: "se_auth",data:{se_auto_share_options:SE_AUTO_SHARE_OPTIONS,timeline:timeline.items}});
             });
           }
           else {

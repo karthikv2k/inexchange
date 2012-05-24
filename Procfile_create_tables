@@ -1,0 +1,1 @@
+web: node lib/run.js --file ./create_tables

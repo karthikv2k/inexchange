@@ -1,5 +1,6 @@
-Welcome {first_name}! 
-Now please login with your Stack Exchange account to link it to your LinkedIn account.
+{>p_title/}
+<p>Welcome {first_name}!</p> 
+<p>Now please login with your Stack Exchange account to link it to your LinkedIn account.</p>
 <a href="https://stackexchange.com/oauth?client_id={client_id}&scope=no_expiry&redirect_uri={redirect_url}">
 Login with Stack Exchange</a>
 

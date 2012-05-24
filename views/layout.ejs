@@ -3,14 +3,18 @@
 <head>
 <title></title>
 <link rel='stylesheet' href='/stylesheets/style.css' />
-<script
-src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link rel="stylesheet" href="/jquery/development-bundle/themes/base/jquery.ui.all.css">
+<script src="/jquery/development-bundle/ui/jquery.ui.core.js"></script>
+<script src="/jquery/development-bundle/ui/jquery.ui.widget.js"></script>
+<script src="/jquery/development-bundle/ui/jquery.ui.tabs.js"></script>
 <script src="/javascripts/dust-full-0.4.0.js"></script> 
+<script src="/javascripts/dusts/p_title.js"></script> 
 <script src="/javascripts/dusts/<%= module %>.js"></script> 
 </head>
 <body>
 <%- body %>
-<div id=data></div>
+<div class="container" id=data></div>
 <script>
 data=JSON.parse('<%- JSON.stringify(data) %>');
 $(document).ready(function(){
